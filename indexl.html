@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página pessoal de Jonathan Toczek - Professor no IFES Campus Serra.">
+  <meta name="author" content="Jonathan Toczek">
+  <title>Jonathan Toczek | Professor IFES</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: 'comic sans', cursive;
+      font-size: 36px;
+      margin: 0;
+    }
+
+ 
+  header nav {
+  display: flex;
+  flex-direction: column;  /* empilha verticalmente */
+  gap: 0px;                /* espaço entre os itens */
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;            /* remove margens extras */
+  line-height: 1;       /* aproxima as linhas de texto */
+  padding: 2px 0;       /* opcional: reduz espaço vertical */
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+    .logo {
+      height: 50px;
+    }
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .perfil p {
+      text-align: justify;
+    }
+
+    .perfil img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #e0e0e0;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
+      
+    }
+
+    .ifes-img {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      display: block;
+      margin: 10px auto;
+    }
+
+    nav a {
+  display: inline-block;              /* Faz o link se comportar como um botão */
+  margin: 8px 12px 8px 0;             /* Espaço ao redor (top, right, bottom, left) */
+  padding: 10px 20px;                /* Espaço interno (top/bottom, left/right) */
+  background-color: #2c3e50;         /* Cor de fundo */
+  color: white;                      /* Cor do texto */
+  text-decoration: none;             /* Remove sublinhado padrão do link */
+  border-radius: 4px;                /* Deixa os cantos arredondados */
+}
+  
+    nav a:hover {
+      background-color: #1a252f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ddd;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jonathan Toczek</h1>
+    <nav>
+    <a href="#sub1">IFES</a>
+    <a href="#sub2">Disciplinas</a>
+  </nav>
+    <img src="Imagens/logoSerra.png"logo-ifes.png" alt="Logo IFES" class="logo">
+  </header>
+
+  <div class="perfil">
+    <img src="Imagens/jts.png" alt="Foto pessoal">
+    <p>Professor de Informática e Automação atuando no Ifes desde 2006, passando pelos Campus Cachoeiro, Guarapari e atualmente no Campus Serra. 
+       Foi membro fundador do curso Técnico em Informática e do curso Integrado em Informática do Campus Cachoeiro
+       Foi membro idealizador, fundador e Coordenador do Curso de Licenciatura Informática EaD/UAB do Campus Cachoeiro
+       Foi membro idealizador e fundador do Curso Técnico em Administração EaD/e-Tec do Campus Guarapari
+       Presidente do NTE (Nucloe de Tecnlogias Educacionais)
+     </p>
+  </div>
+
+  <section>
+    <h2 id="sub1">Conheça o IFES Campus Serra</h2>
+    <a href="https://serra.ifes.edu.br/" target="_blank">
+      <img src="Imagens/serra.png" alt="Imagem do IFES Campus Serra" class="ifes-img">
+    </a>
+
+    <h2 id="sub2">Conheça as disciplinas que ministro</h2>
+    <nav>
+      <a href="Disciplinas/construcao.html">Prog. Web II (II2) </a>
+      <a href="Disciplinas/construcao.html">Prog. WEB (IOT6) </a>
+      <a href="Disciplinas/construcao.html">Topicos Especiais (Inf4)</a>
+      <a href="Disciplinas/construcao.html">Algoritmos e ED (eng2)</a>
+    </nav>
+
+    <p>Para sugestões, <a href="https://forms.gle/seuformulario" target="_blank">clique aqui</a>.</p>
+
+    <h2>Contato</h2>
+    <p>Email: jonathan@ifes.edu.br</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Jonathan Toczek. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
