@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Jogo Interativo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fddb92, #d1fdff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 4px;
+      font-weight: 500;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00c9ff;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #92fe9d;
+    }
+
+    .botao-cancelar {
+      display: block;
+      margin-top: 10px;
+      padding: 12px;
+      width: 100%;
+      text-align: center;
+      background-color: #ccc;
+      color: #333;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 8px;
+      transition: background 0.3s;
+      box-sizing: border-box;
+    }
+
+    .botao-cancelar:hover {
+      background-color: #bbb;
+    }
+
+    .mensagem {
+      margin-top: 15px;
+      font-size: 0.95em;
+      text-align: center;
+    }
+
+    .erro {
+      color: #e74c3c;
+    }
+
+    .sucesso {
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form id="formLogin">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" required>
+
+      <button type="submit">Entrar</button>
+      <a href="parte1v4.html" class="botao-cancelar" id="botao-cancelar">Cancelar</a>
+
+      <div class="mensagem" id="mensagem"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("formLogin").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const senha = document.getElementById("senha").value;
+      const msg = document.getElementById("mensagem");
+
+      const emailSalvo = localStorage.getItem("usuario_email");
+      const senhaSalva = localStorage.getItem("usuario_senha");
+
+      if (email === emailSalvo && senha === senhaSalva) {
+        msg.textContent = "Login bem-sucedido! Redirecionando...";
+        msg.className = "mensagem sucesso";
+
+        setTimeout(() => {
+          window.location.href = "jogo.html"; // substitua pelo caminho real
+        }, 1500);
+      } else {
+        msg.textContent = "E-mail ou senha incorretos.";
+        msg.className = "mensagem erro";
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tela Inicial – Jogo Interativo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .icone-jogo {
+      width: 120px;
+      height: 120px;
+      background-color: #eee;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9em;
+      color: #999;
+      border: 2px dashed #aaa;
+      transition: transform 0.5s ease;
+    }
+
+    .icone-jogo:hover {
+      transform: rotate(10deg) scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .botao-link {
+      display: inline-block;
+      padding: 12px 24px;
+      text-align: center;
+      background-color: #ffffffcc;
+      color: #333;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 8px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .botao-link:hover {
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .mensagem {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .relogio {
+      font-size: 0.9em;
+      color: #333;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meu Jogo Interativo</h1>
+    <div class="icone-jogo">Ícone do Jogo</div>
+    <div class="mensagem" id="mensagem"></div>
+    <div class="relogio" id="relogio"></div>
+  </header>
+
+  <nav>
+    <a href="parte2.html" class="botao-link">Login</a>
+    <a href="parte3.html" class="botao-link">Cadastro</a>
+    <a href="parte4.html" class="botao-link">Recuperar Senha</a>
+    <a href="parte5.html" class="botao-link">Sobre</a>
+  </nav>
+
+  <script>
+    // Mensagem de boas-vindas com base no horário
+    const msg = document.getElementById('mensagem');
+    const hora = new Date().getHours();
+    if (hora < 12) msg.textContent = "Bom dia! Seja bem-vindo ao jogo!";
+    else if (hora < 18) msg.textContent = "Boa tarde! Preparado para jogar?";
+    else msg.textContent = "Boa noite! Continue se divertindo com o projeto!";
+
+    // Atualização do relógio a cada segundo
+    function atualizarRelogio() {
+      const agora = new Date();
+      const relogio = document.getElementById('relogio');
+      relogio.textContent = `Hora atual: ${agora.toLocaleTimeString()}`;
+    }
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+  </script>
+
+</body>
+</html>
