@@ -88,7 +88,7 @@ header nav a:hover {
       margin: 10px auto;
     }
 
-    nav a {
+  .cursos a {
   display: inline-block;              /* Faz o link se comportar como um botão */
   margin: 8px 12px 8px 0;             /* Espaço ao redor (top, right, bottom, left) */
   padding: 10px 20px;                /* Espaço interno (top/bottom, left/right) */
@@ -98,6 +98,12 @@ header nav a:hover {
   border-radius: 4px;                /* Deixa os cantos arredondados */
 }
   
+.cursos p {
+display: inline-block;  
+font-weight: bold;
+font-size: large;
+
+}
     nav a:hover {
       background-color: #1a252f;
     }
