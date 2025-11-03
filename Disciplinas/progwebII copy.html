@@ -13,7 +13,6 @@
       --cardHover:#111d36;
       --accent:#22d3ee;
       --border:#1f2937;
-      --erro:#e11d48;
     }
     *{box-sizing:border-box}
     body{
@@ -49,51 +48,44 @@
     footer{margin-top:1rem; color:var(--muted); font-size:.9rem; text-align:center}
     svg.icon{width:18px; height:18px}
     code{background:#0b1325; padding:.1rem .3rem; border-radius:6px; border:1px solid #1f2742}
-
-    /* Destaque e bloqueio para jogos não funcionais */
-    a.btn.erro {
-      border: 2px solid var(--erro) !important;
-      box-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
-      cursor: not-allowed;
-      pointer-events: none;
-      opacity: 0.6;
-    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h2>Trabalhos – Jogos frontend desenvolvidos em JavaScript</h2>
-      <h3>Turma Integrado em Informática para Internet 2 (2025/1) - ProgWEB II</h3>
+      <h3>Turma Integrado em Informática para Internet 2 (2025/1) - ProgWEB II</h2>
+
       <p class="subtitle">Clique em um botão para abrir o respectivo trabalho em nova aba.</p>
     </header>
 
     <main class="grid">
+     
 
       <!-- BLOCO ÚNICO: Jogo da Memória -->
-      <div class="btn-group">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-        </svg>
+<div class="btn-group">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </svg>
 
-        <span class="text">
-          <span class="title">Jogo da Memória</span>
-          <span class="hint">Níveis de dificuldade e pontuação</span>
-        </span>
+  <span class="text">
+    <span class="title">Jogo da Memória</span>
+    <span class="hint">Níveis de dificuldade e pontuação</span>
+  </span>
 
-        <div class="actions">
-          <a class="badge"
-             href="https://manuelatorres23072008-ops.github.io/jogo-da-memoria-do-quarteto/index.html"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
+  <div class="actions">
+    <a class="badge"
+       href="https://manuelatorres23072008-ops.github.io/jogo-da-memoria-do-quarteto/index.html"
+       target="_blank" rel="noopener noreferrer">Com Login</a>
 
-          <a class="badge"
-             href="https://manuelatorres23072008-ops.github.io/jogo-da-memoria-do-quarteto/Jogo_Tela.html"
-             target="_blank" rel="noopener noreferrer">Sem Login</a>
-        </div>
-      </div>
+    <a class="badge"
+       href="https://manuelatorres23072008-ops.github.io/jogo-da-memoria-do-quarteto/Jogo_Tela.html"
+       target="_blank" rel="noopener noreferrer">Sem Login</a>
+  </div>
+</div>
 
-      <!-- QUIZ POR RODADAS (não funcional) -->
-      <a class="btn erro" href="#" tabindex="-1">
+
+      <a class="btn" href="./quiz-por-rodadas/index.html" target="_blank" rel="noopener noreferrer">
         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
         </svg>
@@ -101,7 +93,7 @@
           <span class="title">Quiz por Rodadas</span>
           <span class="hint">Arrastar termos para definições</span>
         </span>
-        <span class="badge">Indisponível</span>
+        <span class="badge">Abrir</span>
       </a>
 
       <a class="btn" href="https://matheusrodriguesst.github.io/JogoDaForca-Ifes/" target="_blank" rel="noopener noreferrer">
@@ -115,46 +107,47 @@
         <span class="badge">Abrir</span>
       </a>
 
-      <div class="btn-group">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/>
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-        </svg>
+<div class="btn-group">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </svg>
 
-        <span class="text">
-          <span class="title">Jogo de Reflexo</span>
-          <span class="hint">Clique no alvo que muda de posição</span>
-        </span>
+  <span class="text">
+    <span class="title">Jogo de Reflexo</span>
+    <span class="hint">Clique no alvo que muda de posição</span>
+  </span>
 
-        <div class="actions">
-          <a class="badge" href="https://elizakoliveira.github.io/jogo-de-reflexo/index.html"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
-          <a class="badge" href="https://elizakoliveira.github.io/jogo-de-reflexo/jogo.html"
-             target="_blank" rel="noopener noreferrer">Sem Login</a>
-        </div>
-      </div>
+  <div class="actions">
+    <a class="badge" href="https://elizakoliveira.github.io/jogo-de-reflexo/index.html"
+       target="_blank" rel="noopener noreferrer">Com Login</a>
+    <a class="badge" href="https://elizakoliveira.github.io/jogo-de-reflexo/jogo.html"
+       target="_blank" rel="noopener noreferrer">Sem Login</a>
+  </div>
+</div>
 
-      <div class="btn-group">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M3 12h18M7 16h10M8 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-        </svg>
+<div class="btn-group">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M3 12h18M7 16h10M8 8h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </svg>
 
-        <span class="text">
-          <span class="title">Acerte o Rato</span>
-          <span class="hint">Múltiplos alvos com tempo limitado</span>
-        </span>
+  <span class="text">
+    <span class="title">Acerte o Rato</span>
+    <span class="hint">Múltiplos alvos com tempo limitado</span>
+  </span>
 
-        <div class="actions">
-          <a class="badge"
-             href="https://evelynhazinha.github.io/Acerte-o-rato/"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
+  <div class="actions">
+    <a class="badge"
+       href="https://evelynhazinha.github.io/Acerte-o-rato/"
+       target="_blank" rel="noopener noreferrer">Com Login</a>
 
-          <a class="badge"
-             href="https://evelynhazinha.github.io/Acerte-o-rato/tela_jogo.html"
-             target="_blank" rel="noopener noreferrer">Sem Login</a>
-        </div>
-      </div>
+    <a class="badge"
+       href="https://evelynhazinha.github.io/Acerte-o-rato/tela_jogo.html"
+       target="_blank" rel="noopener noreferrer">Sem Login</a>
+  </div>
+</div>
 
+    
       <a class="btn" href="https://joaodadalto.github.io/simongame/" target="_blank" rel="noopener noreferrer">
         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/>
@@ -178,29 +171,28 @@
         <span class="badge">Abrir</span>
       </a>
 
-      <div class="btn-group">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 20l16-16M8 6h12v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-        </svg>
+  <div class="btn-group">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 20l16-16M8 6h12v12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  </svg>
 
-        <span class="text">
-          <span class="title">Scape Bloco</span>
-          <span class="hint">Tirar o bloco do tabuleiro</span>
-        </span>
+  <span class="text">
+    <span class="title">Scape Bloco</span>
+    <span class="hint">Tirar o bloco do tabuleiro</span>
+  </span>
 
-        <div class="actions">
-          <a class="badge"
-             href="https://olvriuri.github.io/scape-block/"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
+  <div class="actions">
+    <a class="badge"
+       href="https://olvriuri.github.io/scape-block/"
+       target="_blank" rel="noopener noreferrer">Com Login</a>
 
-          <a class="badge"
-             href="https://olvriuri.github.io/scape-block/fase01.html"
-             target="_blank" rel="noopener noreferrer">Sem Login</a>
-        </div>
-      </div>
+    <a class="badge"
+       href="https://olvriuri.github.io/scape-block/fase01.html"
+       target="_blank" rel="noopener noreferrer">Sem Login</a>
+  </div>
+</div>
 
-      <!-- JOGO DA COBRINHA (não funcional) -->
-      <a class="btn erro" href="#" tabindex="-1">
+      <a class="btn" href="./cobra/index.html" target="_blank" rel="noopener noreferrer">
         <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M4 12c0-4 4-6 8-6s8 2 8 6-4 6-8 6-8-2-8-6z" stroke="currentColor" stroke-width="1.7" fill="none"/>
           <circle cx="10" cy="11" r="0.9" fill="currentColor"/>
@@ -210,10 +202,11 @@
           <span class="title">Jogo da Cobrinha</span>
           <span class="hint">Velocidade e tamanho aumentam</span>
         </span>
-        <span class="badge">Indisponível</span>
+        <span class="badge">Abrir</span>
       </a>
-
     </main>
+
+    
   </div>
 </body>
 </html>
