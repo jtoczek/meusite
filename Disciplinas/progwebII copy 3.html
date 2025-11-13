@@ -4,10 +4,131 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trabalhos – Jogos e Atividades</title>
-  <link rel="stylesheet" href="progwebII.css">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --fg:#e5e7eb;
+      --muted:#a3a3a3;
+      --card:#0f172a;
+      --cardHover:#111d36;
+      --accent:#22d3ee;
+      --border:#1f2937;
+      --erro:#e11d48;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #0f172a);
+      color:var(--fg);
+      font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      min-height:100dvh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+    }
+    .wrap{width:min(1100px,100%)}
+    header{
+      text-align:center;
+      margin-bottom:1.25rem;
+    }
+    h2{margin:.2rem 0 .4rem; font-size:clamp(1.5rem,2.2vw + 1rem,2.3rem)}
+    p.subtitle{margin:0; color:var(--muted); font-size:.95rem}
+
+    .grid{
+      display:grid;
+      gap:1rem;
+      margin-top:1.25rem;
+      grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+    }
+
+    /* Card genérico para todos os jogos */
+    .btn{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:1rem 1.1rem;
+      text-decoration:none;
+      color:inherit;
+      transition:.15s ease;
+      outline:none;
+      display:flex;
+      flex-direction:column;
+      gap:.6rem;
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      background:var(--cardHover);
+      border-color:#334155;
+      transform:translateY(-1px);
+      box-shadow:0 10px 24px rgba(0,0,0,.25);
+    }
+
+    .btn-header{
+      display:flex;
+      align-items:flex-start;
+      gap:.6rem;
+    }
+
+    .btn .text{
+      display:flex;
+      flex-direction:column;
+    }
+    .btn .title{
+      font-weight:700;
+      font-size:1.02rem;
+    }
+    .btn .hint{
+      font-size:.86rem;
+      color:var(--muted);
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.4rem;
+      margin-top:.2rem;
+    }
+
+    .badge{
+      font-size:.75rem;
+      background:var(--accent);
+      color:#0c111b;
+      padding:.18rem .5rem;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      white-space:nowrap;
+    }
+
+    footer{
+      margin-top:1rem;
+      color:var(--muted);
+      font-size:.9rem;
+      text-align:center;
+    }
+    svg.icon{width:18px; height:18px}
+    code{
+      background:#0b1325;
+      padding:.1rem .3rem;
+      border-radius:6px;
+      border:1px solid #1f2742;
+    }
+
+    /* Destaque e bloqueio para jogos não funcionais (se quiser usar) */
+    .btn.erro {
+      border: 2px solid var(--erro) !important;
+      box-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-  
   <div class="wrap">
     <header>
       <h2>Trabalhos – Jogos frontend desenvolvidos em JavaScript</h2>
@@ -17,7 +138,7 @@
 
     <main class="grid">
 
-      <!-- Jogo da Memória -->
+      <!-- Jogo da Memória (dois botões) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -38,7 +159,7 @@
         </div>
       </div>
 
-      <!-- Quiz por rodadas (antes tinha só um botão; agora 2, com Sem Login desabilitado) -->
+      <!-- Quiz por rodadas (um botão) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -52,12 +173,11 @@
         <div class="actions">
           <a class="badge"
              href="https://vavagamer8796.github.io/jogo"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
-          <span class="badge disabled" aria-disabled="true">Sem Login</span>
+             target="_blank" rel="noopener noreferrer">Abrir</a>
         </div>
       </div>
       
-      <!-- Jogo da Forca (um botão original, agora com Sem Login desabilitado) -->
+      <!-- Jogo da Forca (um botão) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -71,12 +191,11 @@
         <div class="actions">
           <a class="badge"
              href="https://matheusrodriguesst.github.io/JogoDaForca-Ifes/"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
-          <span class="badge disabled" aria-disabled="true">Sem Login</span>
+             target="_blank" rel="noopener noreferrer">Abrir</a>
         </div>
       </div>
 
-      <!-- Jogo de Reflexo -->
+      <!-- Jogo de Reflexo (dois botões) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -98,7 +217,7 @@
         </div>
       </div>
 
-      <!-- Acerte o Rato -->
+      <!-- Acerte o Rato (dois botões) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -113,11 +232,13 @@
           <a class="badge"
              href="https://evelynhazinha.github.io/Acerte-o-rato/"
              target="_blank" rel="noopener noreferrer">Com Login</a>
-          <span class="badge disabled" aria-disabled="true">Sem Login</span>
+          <a class="badge"
+             href="https://evelynhazinha.github.io/Acerte-o-rato/tela_jogo.html"
+             target="_blank" rel="noopener noreferrer">Sem Login</a>
         </div>
       </div>
 
-      <!-- Jogo de Sequência (Simon) -->
+      <!-- Jogo de Sequência (Simon) (um botão) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -132,16 +253,11 @@
         <div class="actions">
           <a class="badge"
              href="https://joaodadalto.github.io/simongame/"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
-          <a class="badge"
-             href="https://joaodadalto.github.io/simongame/home.html"
-             target="_blank" rel="noopener noreferrer">Sem Login</a>
+             target="_blank" rel="noopener noreferrer">Abrir</a>
         </div>
       </div>
 
-
-      
-      <!-- Labirinto com Teclado -->
+      <!-- Labirinto com Teclado (um botão) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -155,12 +271,11 @@
         <div class="actions">
           <a class="badge"
              href="https://estevaoagostini.github.io/Jogo-Labirinto/index.html"
-             target="_blank" rel="noopener noreferrer">Com Login</a>
-          <span class="badge disabled" aria-disabled="true">Sem Login</span>
+             target="_blank" rel="noopener noreferrer">Abrir</a>
         </div>
       </div>
 
-      <!-- Scape Bloco -->
+      <!-- Scape Bloco (dois botões) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -181,7 +296,7 @@
         </div>
       </div>
 
-      <!-- Jogo da Cobrinha -->
+      <!-- Jogo da Cobrinha (dois botões) -->
       <div class="btn">
         <div class="btn-header">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -203,20 +318,6 @@
       </div>
 
     </main>
-     <footer>
-      &copy; 2025 Jonathan Toczek. Todos os direitos reservados.
-
-      <div class="footer-back">
-        <a class="back-btn" href="../index.html">
-          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6"
-                  stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Voltar à página principal</span>
-        </a>
-      </div>
-    </footer>
   </div>
 </body>
 </html>
